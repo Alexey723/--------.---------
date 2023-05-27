@@ -1,0 +1,222 @@
+@font-face
+		{
+			src: url('/font/8343.otf');
+			font-family: 'nautilus pompilius';
+		}
+		
+@font-face
+{
+	src: url('/font/Chocogirl.ttf');
+	font-family: 'Chocogirl';
+}
+
+body{
+	background-color: Seashell;
+	cursor: url('cursor.cur'),auto;
+	display: grid;
+	gap: 5px;
+	grid-template-columns: 200px 1fr;
+	grid-template-rows: 20% 1fr 5%;
+	grid-template-areas:
+	"header header"
+	"nav main"
+	"nav footer";
+} 
+
+h3{
+	color: DarkOliveGreen;
+	font-style: italic;
+	text-decoration: underline;
+}
+
+p{
+	text-indent: 25px;
+	font-size: 16px;
+	font-family: Arial;
+}
+
+.header{
+	grid-area:	header;
+}
+
+.logo{
+	display: flex;
+	height: 100%;
+	justify-content: center;
+	align-items: center;
+}
+	.header img{
+		height: 100%;
+		float: left;
+	}
+	.header h1{
+		color: DarkViolet;
+		font-family: 'nautilus pompilius';
+		font-size: 3vw;
+	}
+	
+.nav{
+	grid-area:nav; 
+}
+	.nav li
+		{
+		outline: 1px solid DarkViolet;
+		width: 120px;
+		text-align: center;
+		background-color: white;
+		font-family: Arial;
+		color: DarkViolet;
+		font-size: 14pt;
+		margin: 10 0 10 0;
+		border-radius: 100px;
+		box-shadow: 0 0 5px red;
+		}
+	.nav li:hover
+		{
+			outline: 1px solid green;
+			width: 120px;
+			font-family: Arial;
+			background-color: Thistle;
+			color: red;
+			font-size: 14pt;
+			margin: 10 0 10 0;
+			border-radius: 100px;
+			box-shadow: 0 0 15px Thistle;
+			transition: 0.5s;
+		}
+	.nav li a
+		{
+		text-decoration: none;
+		width: 120px;
+		}
+	.nav li a:hover
+		{
+		text-decoration: none;
+		width: 100%;
+		color: red;
+		transition: 0.5s;
+		}
+		
+.main{
+	grid-area:main;
+}
+	.main img{
+		height: 150px;
+		padding: 20px;
+		border-radius: 50px;
+		transition: 1s;
+		float: left;
+	}
+	.main img:hover{
+		transform: scale(2);
+	}
+
+
+.about ol p{
+	color: DarkSlateGrey;
+	font-size: 16px;
+	font-family: Arial;
+	font-style: italic;
+	text-indent: 0px;
+}
+
+.mainInfo{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+.mainInfo video{
+	margin: 0 auto;
+	height: 480px;
+}
+
+.footer{
+	grid-area:footer;
+}
+
+.downpage{
+	display: flex;
+	height: 100%;
+	justify-content: center;
+	align-items: center;
+}
+	.downpage a{
+	text-decoration: none;
+	}
+	.downpage p{
+	font-weight: bold;
+	}
+	
+h2{
+	text-align: center;
+	text-decoration: underline;
+	color: Indigo;
+	font-family: 'Chocogirl';
+}
+
+table{
+	font-family: Arial;
+	font-size: 20px;
+	color: DarkViolet;
+}
+
+td{
+	width: 150px;
+}
+
+hr{
+	height: 6px;
+	border: none;
+	background: linear-gradient(45deg, Indigo, red, blue);
+}	
+
+.backToStart{
+	border: 2px solid green;
+	border-radius: 70px;
+	background-color: orange;
+	width: 70px;
+	position: fixed;
+	bottom: 5;
+	right: 5;
+	text-align: center;
+}
+	.backToStart a{
+		text-decoration: none;
+		color: blue;
+		font-weight: bold;
+	}
+	.backToStart a:visited{
+		text-decoration: none;
+		color: blue;
+		font-weight: bold;
+	}
+
+@media all and (max-width: 800px)
+{
+	body{
+		grid-template-areas:
+		"header"
+		"nav"
+		"main"
+		"footer";
+		grid-template-columns: 1fr;
+		grid-template-rows: 100px 100px 1fr 50px;
+	}
+.nav{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+	.nav li
+			{
+			float: left;
+			margin: 2px 2px;
+			}
+	.nav li:hover
+			{	
+			float: left;
+			margin: 2px 2px;
+			}
+	}
